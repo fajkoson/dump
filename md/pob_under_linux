@@ -1,0 +1,17 @@
+# INSTALL
+sudo pacman -S flatpak
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub community.pathofbuilding.PathOfBuilding
+
+# IMPORT BUILDS
+# Windows source: C:\Users\<username>\Documents\Path of Building\Builds\
+# Find the Linux destination directory:
+find ~/.var/app/community.pathofbuilding.PathOfBuilding -type d -name Builds
+# Copy existing .xml files into the destination, preserving subfolders.
+
+# EXECUTION
+# Path of Exile 1
+flatpak run community.pathofbuilding.PathOfBuilding poe1
+
+# Path of Exile 2
+flatpak run community.pathofbuilding.PathOfBuilding poe2
